@@ -35,14 +35,14 @@ footer{margin-top:40px;color:var(--muted);font-size:.9rem}
   <svg viewBox="9 9 46 46" aria-hidden="true"><path d="M22 33 L28.6 39.4 L43.6 24 C46.8 20.8 51 24.5 51 32 A19 19 0 1 1 32 13" fill="none" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
   <h1>Tickloop Privacy Policy</h1>
 </header>
-<p class="meta">Effective 28 October 2026 · Applies to the Tickloop app for Android (package <code>app.tickloop</code>)</p>
+<p class="meta">Effective 31 October 2026 · Applies to the Tickloop app for Android (package <code>app.tickloop</code>)</p>
 
 <div class="card">
-  <p><strong>The short version.</strong> Tickloop has no ads, no analytics and no accounts. Your bills and income stay on your phone. Only if you create or join a household are the household's bills, the names you give, and anything you choose to share stored online, so the people in your household can see them. We never sell data or use it for anything else.</p>
+  <p><strong>The short version.</strong> Tickloop has no ads and no analytics, and you don't need an account. Your bills and income stay on your phone. Only if you choose to sign in with Google is a copy kept in your account, so you can get it back on a new or reset phone. Only if you create or join a household are the household's bills, the names you give, and anything you choose to share stored online, so the people in your household can see them. We never sell data or use it for anything else.</p>
 </div>
 
 <h2>1. What stays on your phone</h2>
-<p>Everything you enter for yourself stays in the app's private storage on your device: your bills, amounts, due days, categories, income, payday settings, ticks, history and reminder settings. It is not sent to us or anyone else. Android's own backup may include it if you have device backup turned on; that backup is handled by Google under your Google account and its terms.</p>
+<p>Unless you sign in with Google (section 3), everything you enter for yourself stays in the app's private storage on your device: your bills, amounts, due days, categories, income, payday settings, ticks, history and reminder settings. It is not sent to us or anyone else. Android's own backup may include it if you have device backup turned on; that backup is handled by Google under your Google account and its terms.</p>
 
 <h2>2. Households (optional)</h2>
 <p>If you create or join a household, Tickloop uses Google Firebase so the members' phones stay in sync. In that case the following is stored in Google Cloud Firestore, in the European Union (multi-region eur3):</p>
@@ -57,45 +57,57 @@ footer{margin-top:40px;color:var(--muted);font-size:.9rem}
 <p>Security rules on the server only let members of a household read or change it. A member who is removed loses access, and the invite code is replaced. Data is encrypted in transit (HTTPS).</p>
 <p>Firebase is provided by Google. Google processes this data on our behalf; see the <a href="https://firebase.google.com/support/privacy">Firebase privacy and security information</a>. Like any server, Google's systems see your device's IP address when the app connects.</p>
 
-<h2>3. Fonts</h2>
+<h2>3. Sign in with Google (optional)</h2>
+<p>You can sign in with your Google account in Settings, so your data comes back if you reinstall the app or get a new phone. If you do:</p>
+<ul>
+  <li>Firebase Authentication receives your <strong>email address</strong> and <strong>Google account ID</strong> from Google, to know which saved copy is yours. We don't get your password, contacts or anything else from your Google account.</li>
+  <li>A copy of everything listed in section 1 is stored in Google Cloud Firestore in the European Union (eur3), linked to your account. Security rules let only you read or change it. It is updated when you make changes, and it is not shown to anyone else, including your household.</li>
+  <li>You can sign out at any time; the saved copy stays in your account until you delete it.</li>
+</ul>
+
+<h2 id="delete-account">4. Deleting your account</h2>
+<p>In the app: <strong>Settings › Google account › Delete account</strong>. This deletes your saved copy and your sign-in from the server straight away, and takes you out of your household. Without the app (for example if you no longer have the phone), ask us to delete it using the contact in section 12, and give the email address you signed in with. We delete the account and all its data within 30 days. Nothing is kept afterwards, except what section 8 says about household history.</p>
+
+<h2>5. Fonts</h2>
 <p>When your phone is online, the app loads its two typefaces from Google Fonts. Google receives your IP address and basic browser information for that request, as described in the <a href="https://developers.google.com/fonts/faq/privacy">Google Fonts privacy FAQ</a>. No other information is sent. Offline, the app uses your phone's own fonts.</p>
 
-<h2>4. Reminders and permissions</h2>
+<h2>6. Reminders and permissions</h2>
 <ul>
   <li><strong>Notifications:</strong> bill reminders are worked out and scheduled on your phone. Nothing is sent anywhere to create them. You can turn them off in the app or in Android settings.</li>
   <li><strong>Run at startup:</strong> only used to put your reminders back after the phone restarts.</li>
-  <li><strong>Internet:</strong> used for households and fonts as described above.</li>
+  <li><strong>Internet:</strong> used for signing in, households and fonts as described above.</li>
 </ul>
 <p>Tickloop does not access your contacts, location, camera, microphone, files or other apps. When you share an invite code, Android's share sheet hands the text to the app you pick (for example WhatsApp or Messenger); what that app does with it is governed by its own policy.</p>
 
-<h2>5. What we don't do</h2>
+<h2>7. What we don't do</h2>
 <ul>
   <li>No advertising, tracking, analytics or crash reporting.</li>
-  <li>No selling, renting or sharing of data with third parties, other than Google as the provider of Firebase and Google Fonts described above.</li>
+  <li>No selling, renting or sharing of data with third parties, other than Google as the provider of Firebase, Sign in with Google and Google Fonts described above.</li>
   <li>No bank connections. Tickloop never sees your bank or card details; you type in amounts yourself.</li>
 </ul>
 
-<h2>6. Keeping and deleting your data</h2>
+<h2>8. Keeping and deleting your data</h2>
 <ul>
   <li><strong>On your phone:</strong> uninstall the app or clear its storage in Android settings, and all data on the phone is gone.</li>
+  <li><strong>In your Google account:</strong> see section 4.</li>
   <li><strong>In a household:</strong> choose <em>Leave household</em> in the app. Your membership and anything you shared are deleted from the server straight away. When the last member leaves, the whole household and its history are deleted. Turning off "Share all my bills and income" deletes your shared list immediately.</li>
   <li>Ticks you made in a household stay in its history with your name, so the others keep an accurate record. Ask us if you want these removed too.</li>
   <li>If you've lost access to the app and want household data about you deleted, contact us (below) with the household's invite code and the name you used.</li>
 </ul>
 
-<h2>7. Your rights</h2>
-<p>If you live in the EU/EEA or the UK, you have the right to access, correct, delete or export personal data about you, and to object to or restrict its processing. Household data is processed to provide the feature you asked for (GDPR Article 6(1)(b)). You can also complain to your data protection authority, for example IMY in Sweden.</p>
+<h2>9. Your rights</h2>
+<p>If you live in the EU/EEA or the UK, you have the right to access, correct, delete or export personal data about you, and to object to or restrict its processing. Household and account data is processed to provide the features you asked for (GDPR Article 6(1)(b)). You can also complain to your data protection authority, for example IMY in Sweden.</p>
 
-<h2>8. Children</h2>
+<h2>10. Children</h2>
 <p>Tickloop is a budgeting tool meant for adults and is not directed at children under 13.</p>
 
-<h2>9. Changes</h2>
+<h2>11. Changes</h2>
 <p>If this policy changes, the new version will be published on this page with a new effective date. Significant changes will also be mentioned in the app's release notes.</p>
 
-<h2>10. Contact</h2>
+<h2>12. Contact</h2>
 <p>Questions or requests: open an issue at <a href="https://github.com/leaskeg/tickloop-privacy/issues">github.com/leaskeg/tickloop-privacy/issues</a>.</p>
 
-<footer>Tickloop · Privacy Policy · Effective 28 October 2026</footer>
+<footer>Tickloop · Privacy Policy · Effective 31 October 2026</footer>
 </main>
 </body>
 </html>
